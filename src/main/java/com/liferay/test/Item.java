@@ -15,7 +15,7 @@ abstract class Item {
     private double countedTaxPrize;
     private double countedTax;
 
-    private static final DecimalFormat df2 = new DecimalFormat("#.00");
+    private static final DecimalFormat DF_2 = new DecimalFormat("#.00");
 
     public abstract String toInputPrintFormat();
     public abstract String toOutputPrintFormat();
@@ -45,7 +45,7 @@ abstract class Item {
     }
 
     static String formatPrize(double prize){
-        return df2.format(prize);
+        return DF_2.format(prize);
     }
 
     double countTaxPrize(){

@@ -8,7 +8,7 @@ import java.util.List;
  */
 class App {
 
-    private static final int headerPointCount = 120;
+    private static final int HEADER_POINT_COUNT = 120;
 
     public static void main( String[] args ) {
 
@@ -94,7 +94,7 @@ class App {
 
     private static void printHeader(int number){
         String inputText = "INPUT " + number;
-        printDashes(headerPointCount, true);
+        printDashes(HEADER_POINT_COUNT, true);
 
         System.out.print(inputText);
         printSecondColumn("OUTPUT " + number, true);
@@ -105,7 +105,7 @@ class App {
     }
 
     private static void printSecondColumn(String value, boolean withValue){
-        int max = withValue ? (headerPointCount/2) - value.length() :headerPointCount/2;
+        int max = withValue ? (HEADER_POINT_COUNT/2) - value.length() :HEADER_POINT_COUNT/2;
         for(int i = 0; i < max; i++ ){
             System.out.print(" ");
         }
